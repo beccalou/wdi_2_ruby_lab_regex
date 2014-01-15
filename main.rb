@@ -20,7 +20,9 @@ def valid_phone_numbers(source_text)
 	return valid_numbers
 end
 
-def area_codes
+def area_codes(source_text)
+	codes = source_text.scan(/[6,8]{1}[0-1]{1}[0-7]{1}/).uniq
+	return codes
 end
 
 def email_addresses(source_text)
