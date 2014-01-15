@@ -10,7 +10,9 @@ def valid_mit_ip_addresses(source_text)
 	return mit_ips
 end
 
-def non_mit_ip_addresses
+def non_mit_ip_addresses(source_text)
+	non_mit = source_text.scan(/\d{3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/)
+	return non_mit
 end
 
 def valid_phone_numbers(source_text)
@@ -26,7 +28,9 @@ def email_addresses(source_text)
 	return emails
 end
 
-def zip_codes
+def zip_codes(source_text)
+	zip = source_text.scan(/\d{4}4/)
+	return zip
 end
 
 def hex_colors(source_text)
